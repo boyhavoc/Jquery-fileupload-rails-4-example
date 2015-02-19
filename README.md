@@ -2,7 +2,7 @@
 
 ## Description
 
-The application provides a basic demo of Jquery  Fileupload Plugin in action using paperclip.
+The application provides a basic demo of Jquery  Fileupload Plugin in action using paperclip in Rails.
 
 ## Setup
 
@@ -17,7 +17,7 @@ The application provides a basic demo of Jquery  Fileupload Plugin in action usi
 
 * Ruby version >= 2.0
 * Rails version >= 4.0
-*Note: ImageMagick must be installed(on your machine) and Paperclip must have access to it for pocessing images.
+* Note: ImageMagick must be installed(on your machine) and Paperclip must have access to it for processing images.
 
 ## Sources
 
