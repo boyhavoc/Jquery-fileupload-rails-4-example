@@ -1,4 +1,4 @@
-# Example in Rails 4.V for  Uploading files with jQuery File Upload plugin and Paperclip
+# Demo application for uploading files
 
 ## Description
 
