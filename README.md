@@ -6,23 +6,18 @@ The application provides a basic demo of Jquery  Fileupload Plugin in action usi
 
 ## Setup
 
-1) Download the application.
-2) bundle install
-3) rake db:create
-3) rake db:migrate
-4) Start the application (rails s)
-5) Visit http:://localhost:3000
+* Download the application.
+* bundle install
+* rake db:create
+* rake db:migrate
+* Start the application (rails s)
+* Visit http:://localhost:3000
 
----
-Requirements
-------------
+## Requirements
 
-### Ruby and Rails
-
-Ruby version >= 2.0
-Rails version >= 4.0
+* Ruby version >= 2.0
+* Rails version >= 4.0
 *Note: ImageMagick must be installed(on your machine) and Paperclip must have access to it for pocessing images.
-
 
 ## Sources
 
