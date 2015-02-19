@@ -1,0 +1,54 @@
+// Place all the styles related to the uploads controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.fileinput-button {
+  position: relative;
+  overflow: hidden;
+}
+
+
+.fileinput-button input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  opacity: 0;
+  -ms-filter: 'alpha(opacity=0)';
+  font-size: 200px;
+  direction: ltr;
+  cursor: pointer;
+}
+
+.fileupload-progress{
+  margin-top: 10px;
+  width: 100%;
+}
+
+
+//CSS that can used to customize dropzone area styling
+
+#dropzone {
+   border: 1px solid #ccc;
+  background: #fcf4f2;
+  min-height: 300px;
+  line-height: 250px;
+  text-align: center;
+  font-weight: bold;
+}
+#dropzone.in {
+  min-height: 300px;
+  line-height: 200px;
+  font-size: larger;
+}
+#dropzone.hover {
+  background: #eec8bc;
+}
+#dropzone.fade {
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  opacity: 1;
+}
