@@ -21,7 +21,7 @@ class UploadsController < ApplicationController
   def destroy
     @upload.destroy
     respond_to do |format|
-      format.html { redirect_to diners_fav_dish_uploads_path }
+      format.html { redirect_to uploads_path }
       format.json { head :no_content }
     end
   end
