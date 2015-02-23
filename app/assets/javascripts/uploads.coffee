@@ -12,30 +12,19 @@ $ ->
 
   $('#fileupload').fileupload url: '/uploads/'
   $('#fileupload, #fileupload_dda_example').fileupload 'option', 'redirect', window.location.href.replace(/\/[^\/]*$/, '/cors/result.html?%s')
-  if window.location.hostname == 'localhost:3000'
-    $('#fileupload, #fileupload_dda_example').fileupload 'option',
-      url: '//uploads/'
-      disableImageResize: /Android(?!.*Chrome)|Opera/.test(window.navigator.userAgent)
-      maxFileSize: 5000000
-      acceptFileTypes: /(\.|\/)(gif|jpe?g|png)$/i
-    if $.support.cors
-      $.ajax(
-        url: '//uploads/'
-        type: 'HEAD').fail ->
-        $('<div class="alert alert-danger"/>').text('Upload server currently unavailable - ' + new Date).appendTo '#fileupload'
-        return
-  else
-    $('#fileupload, #fileupload_dda_example').addClass 'fileupload-processing'
-    $.ajax(
-      url: $('#fileupload, #fileupload_dda_example').fileupload('option', 'url')
-      dataType: 'json'
-      context: $('#fileupload')[0]).always(->
-      $(this).removeClass 'fileupload-processing'
-      return
-    ).done (result) ->
-      $(this).fileupload('option', 'done').call this, $.Event('done'), result: result
-      return
-  return
+  $('#fileupload, #fileupload_dda_example').addClass 'fileupload-processing'
+  $.ajax(
+    url: $('#fileupload, #fileupload_dda_example').fileupload('option', 'url')
+    dataType: 'json'
+    maxFileSize: 5000000
+    acceptFileTypes: /(\.|\/)(gif|jpe?g|png)$/i
+    context: $('#fileupload')[0]).always(->
+    $(this).removeClass 'fileupload-processing'
+    return
+  ).done (result) ->
+    $(this).fileupload('option', 'done').call this, $.Event('done'), result: result
+    return
+
 
 
 
